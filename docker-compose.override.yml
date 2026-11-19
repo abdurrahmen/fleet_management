@@ -1,0 +1,25 @@
+services:
+  application:
+    environment:
+      APP_KEY: "base64:ru38VDwFl2N8BObDwlE7FrPnfbytxl7mDUbEVHpEhT0="
+      APP_NAME: "Fleetbase"
+      APP_URL: "http://localhost:8000"
+      CONSOLE_HOST: "http://localhost:4200"
+      ENVIRONMENT: "Development"
+      APP_DEBUG: "true"
+      DATABASE_URL: "mysql://fleetbase:7b6570eebb47cf72e4d46942d13e44b1ae9f88a3@database/fleetbase"
+      SESSION_DOMAIN: "localhost"
+      MAIL_MAILER: "log"
+      FILESYSTEM_DRIVER: "Local disk  (development only — files lost on container rebuild)"
+
+  socket:
+    environment:
+      SOCKETCLUSTER_OPTIONS: "{\"origins\":\"http://localhost:*,https://localhost:*,ws://localhost:*,wss://localhost:*\"}"
+
+  database:
+    environment:
+      MYSQL_ROOT_PASSWORD: "a180d45c6b9b3def1d4f695511640f2164cfd2be"
+      MYSQL_DATABASE: "fleetbase"
+      MYSQL_USER: "fleetbase"
+      MYSQL_PASSWORD: "7b6570eebb47cf72e4d46942d13e44b1ae9f88a3"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
